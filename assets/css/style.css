@@ -1,3 +1,10 @@
+@font-face {
+    font-family: 'Future';
+    src: url('fonts/FutureF.woff2') format('woff2'), /* Super Modern Browsers */
+         url('fonts/FutureF.woff') format('woff'), /* Pretty Modern Browsers */
+         url('fonts/FutureF.ttf') format('truetype'); /* Safari, Android, iOS */
+  }
+
 :root {
     --raw-seinna: hsl(145, 100%, 50%);
     --sizzling-sunrise: hsl(51, 95%, 54%);
@@ -5,7 +12,7 @@
     --black: hsl(0, 0%, 0%);
     --white: hsl(0, 0%, 0%);
 
-    --ff-saira-stencil-one: "Saira Stencil One", sans-serif;
+    --ff-saira-stencil-one: "Future", sans-serif;
     --ff-poppins: "Poppins", sans-serif;
     --ff-roboto: "Roboto", sans-serif;
 
@@ -36,11 +43,13 @@ body.dark_theme {
     --card-shadow: hsla(0, 0%, 0%, 0.4);
     --input-bg: hsl(0, 0%, 16%);
 
+    --form-text: hsl(140.7, 100%, 50%);
+    --opp-btn: hsl(0, 0%, 100%);
+
     --shadow-1: 10px 10px 40px var(--card-shadow);
 }
 
 body.light_theme {
-    --raw-seinna: hsl(115, 100%, 50%);
     --scarlet: hsl(110, 100%, 35%);
     --bg-primary: hsl(0, 0%, 90%);
     --bg-secondary: hsl(0, 0%, 100%);
@@ -49,12 +58,11 @@ body.light_theme {
     --card-shadow: hsla(0, 0%, 0%, 0.1);
     --input-bg: hsl(0, 0%, 93%);
 
+    --form-text: var(--black);
+    --opp-btn: hsla(0, 0%, 0%, 1);
+
     --shadow-1: 10px 10px 40px var(--card-shadow);
 }
-
-/*-----------------------------------*\
- * #RESET
-\*-----------------------------------*/
 
 *,
 *::before,
@@ -131,10 +139,6 @@ body.active {
     overflow: hidden;
 }
 
-/*-----------------------------------*\
- * #REUSED STYLE
-\*-----------------------------------*/
-
 .container {
     padding-inline: 10px;
 }
@@ -185,13 +189,13 @@ body.active {
 .btn-primary {
     border-color: var(--raw-seinna);
     background-color: transparent;
-    color: white;
+    color: var(--opp-btn);
 }
 
 .btn-primary:is(:hover, :focus) {
     border-color: var(--black);
     background: var(--raw-seinna);
-    color: var(--black);
+    color: var(--opp-btn);
 }
 
 .btn-secondary {
@@ -251,10 +255,6 @@ body.active {
     z-index: 1;
 }
 
-/*-----------------------------------*\
- * #HEADER
-\*-----------------------------------*/
-
 .header {
     padding-block: 15px;
     position: fixed;
@@ -287,6 +287,7 @@ body.active {
 .logo a {
     color: var(--color-primary);
     font-family: var(--ff-saira-stencil-one);
+    font-weight: bolder;
 }
 
 .logo span {
@@ -439,10 +440,6 @@ body.active {
     width: 100%;
 }
 
-/*-----------------------------------*\
- * #HERO
-\*-----------------------------------*/
-
 main {
     overflow-x: hidden;
 }
@@ -482,10 +479,6 @@ main {
 .hero .btn-primary {
     margin-inline: auto;
 }
-
-/*-----------------------------------*\
- * #STATS
-\*-----------------------------------*/
 
 .stats {
     padding-block: var(--section-padding);
@@ -542,10 +535,6 @@ main {
     color: var(--color-secondary);
 }
 
-/*-----------------------------------*\
- * #ABOUT
-\*-----------------------------------*/
-
 .about {
     padding-block: var(--section-padding);
 }
@@ -564,10 +553,6 @@ main {
 .about .btn-secondary {
     margin-bottom: 10px;
 }
-
-/*-----------------------------------*\
- * #SKILLS
-\*-----------------------------------*/
 
 .skills {
     padding-block: var(--section-padding);
@@ -660,10 +645,6 @@ main {
     opacity: 1;
 }
 
-/*-----------------------------------*\
- * #PROJECT
-\*-----------------------------------*/
-
 .project {
     padding-block: var(--section-padding);
 }
@@ -735,10 +716,6 @@ main {
     text-decoration: underline;
     margin-inline: auto;
 }
-
-/*-----------------------------------*\
- * #CONTACT
-\*-----------------------------------*/
 
 .contact {
     padding-block: var(--section-padding);
@@ -835,7 +812,7 @@ main {
 
 .input-field {
     background: var(--input-bg);
-    color: var(--raw-seinna);
+    color: var(--form-text);
     padding: 10px;
     padding-left: 40px;
     border-radius: var(--radius-12);
@@ -877,10 +854,6 @@ textarea.input-field {
     background: var(--raw-seinna);
 }
 
-/*-----------------------------------*\
- * #FOOTER
-\*-----------------------------------*/
-
 .footer {
     background: var(--bg-secondary);
     padding-block: 20px;
@@ -901,10 +874,6 @@ textarea.input-field {
     display: inline-block;
     color: var(--raw-seinna);
 }
-
-/*-----------------------------------*\
- * #GO TO TOP
-\*-----------------------------------*/
 
 .go-top {
     position: fixed;
@@ -930,14 +899,6 @@ textarea.input-field {
     pointer-events: all;
     transform: translateY(0);
 }
-
-/*-----------------------------------*\
- * #MEDIA QUERIES
-\*-----------------------------------*/
-
-/**
- * responsive for larger than 550px screen
- */
 
 @media (min-width: 550px) {
     /**
