@@ -36,18 +36,16 @@
 }
 
 body.dark_theme {
-    --bg-primary: hsl(0, 0%, 12%);
-    --bg-secondary: hsl(0, 0%, 19%);
+    --bg-primary: black;
+    --bg-secondary: hsl(0, 0%, 6.7%);
     --color-primary: hsl(0, 0%, 100%);
-    --color-secondary: hsl(0, 0%, 62%);
+    --color-secondary: hsl(0, 0%, 67.5%);
     --card-shadow: hsla(0, 0%, 0%, 0.4);
-    --input-bg: hsl(0, 0%, 16%);
-
+    --input-bg: hsl(0, 0%, 11%);
     --form-text: hsl(140.7, 100%, 50%);
     --opp-btn: hsl(0, 0%, 100%);
-
     --shadow-1: 10px 10px 40px var(--card-shadow);
-}
+  }
 
 body.light_theme {
     --scarlet: hsl(110, 100%, 35%);
@@ -133,6 +131,7 @@ html {
 body {
     background: var(--bg-primary);
     transition: var(--transition-1);
+    z-index: 3;
 }
 
 body.active {
@@ -473,7 +472,9 @@ main {
     color: var(--color-primary);
     text-align: center;
     background-color: var(--raw-seinna);
-    padding: 10px;
+    padding: 10px;position: relative;
+    top: -7rem;
+    border-radius: 10px;
 }
 
 .hero .btn-primary {

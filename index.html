@@ -19,6 +19,10 @@
 </head>
 
 <body id="top" class="dark_theme">
+  
+  <script type="module" src="assets/js/spline.js"></script>
+  <spline-viewer url="assets/js/scene.splinecode" style="position: absolute; overflow:hidden; display: inline; scroll-behavior: unset;"></spline-viewer>
+
 
   <header class="header" data-header>
     <div class="container">
@@ -34,9 +38,9 @@
           <option value="Hin">Hin</option>
         </select> -->
 
-        <button class="theme-btn" aria-label="Change Theme" title="Change Theme" data-theme-btn>
+        <!-- <button class="theme-btn" aria-label="Change Theme" title="Change Theme" data-theme-btn>
           <span class="icon"></span>
-        </button>
+        </button> -->
 
       </div>
 
@@ -60,29 +64,25 @@
   </header>
 
 
-
-
-
   <main>
     <article class="container">
 
       <!-- 
         - #HERO
       -->
-
+      
       <section class="hero" id="home">
 
-        <figure class="hero-banner">
+        <!-- <figure class="hero-banner">
           <picture>
             <img src="./assets/images/MainImg.png" class="w-100" style="transform: scale(0.8,0.8);">
           </picture>
-
-        </figure>
+        </figure> -->
 
         <div class="hero-content">
-          <h2 class="h2 hero-title" id="DynamicMainContent">Web & Software Application Development</h2>
+          <h2 class="h2 hero-title" id="DynamicMainContent" style="color: black;">Web & Software Application Development</h2>
         </div>
-        <a href="#contact" class="btn btn-primary">Get in touch</a>
+        <a href="#contact" class="btn btn-primary" style="position: relative; top: 9rem;">Get in touch</a>
 
         <ul class="hero-social-list">
 
@@ -222,7 +222,7 @@
           </p>
 
           <div class="btn-group">
-            <button class="btn btn-secondary">Hire me</button>
+            <button class="btn btn-secondary"><a href="#contact" style="text-decoration: none;">Hire me</a></button>
 
             <button class="btn btn-primary">Download cv</button>
           </div>
@@ -685,9 +685,9 @@
               <div class="wrapper">
                 <h3 class="h4 contact-item-title">Email:</h3>
 
-                <a href="mailto:support@jack.com" class="contact-info">arsgulu@gmail.com</a>
+                <a href="mailto:arsgulu@gmail.com" class="contact-info">arsgulu@gmail.com</a>
 
-                <a href="mailto:info@jack.com" class="contact-info">arshdeepdewangan123@gmail.com</a>
+                <a href="mailto:arshdeepdewangan123@gmail.com" class="contact-info">arshdeepdewangan123@gmail.com</a>
               </div>
 
             </li>
