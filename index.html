@@ -20,8 +20,21 @@
 
 <body id="top" class="dark_theme">
   
-  <script type="module" src="assets/js/spline.js"></script>
-  <spline-viewer url="assets/js/scene.splinecode" style="position: absolute; overflow:hidden; display: inline; scroll-behavior: unset;"></spline-viewer>
+  <video id="bgVid" src="waveform.webm" type="video/webm" autoplay style="position: absolute; opacity: 0; transition: opacity 3s;"></video>
+
+<script>
+    var video = document.getElementById("bgVid");
+
+    video.addEventListener("ended", function () {
+        this.currentTime = 0; // Reset the video to the beginning
+        Play(); // Play the video again
+    });
+
+    function Play() {
+        video.style.opacity = 1; // Fade in the video
+        video.play(); // Start playing the video
+    }Play();
+</script>
 
 
   <header class="header" data-header>
@@ -222,7 +235,7 @@
           </p>
 
           <div class="btn-group">
-            <button class="btn btn-secondary"><a href="#contact" style="text-decoration: none;">Hire me</a></button>
+            <button class="btn btn-secondary"><a href="#contact" style="text-decoration: none; color: black;">Hire me</a></button>
 
             <button class="btn btn-primary">Download cv</button>
           </div>
@@ -844,7 +857,6 @@
   -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
 </body>
 
 </html>

@@ -1318,3 +1318,7 @@ textarea.input-field {
 * {
     scroll-behavior: smooth;
 }
+
+.spline-watermark{
+    display: none;
+}
