@@ -1,862 +1,899 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Arsdeep</title>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio Arsdeep</title>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
 
-  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./assets/css/style.css" />
 
-  <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto:wght@400;700&family=Saira+Stencil+One&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto:wght@400;700&family=Saira+Stencil+One&display=swap"
-    rel="stylesheet">
-</head>
+  <body id="top" class="dark_theme">
+    <video
+      id="bgVid"
+      src="waveform.webm"
+      type="video/webm"
+      autoplay
+      style="
+        position: absolute;
+        opacity: 0;
+        transition: opacity 3s;
+        overflow: hidden;
+        width: 100%;
+      "
+    ></video>
 
-<body id="top" class="dark_theme">
-  
-  <video id="bgVid" src="waveform.webm" type="video/webm" autoplay style="position: absolute; opacity: 0; transition: opacity 3s; overflow: hidden; width: 100%;"></video>
+    <script>
+      var video = document.getElementById("bgVid");
 
-<script>
-    var video = document.getElementById("bgVid");
-
-    video.addEventListener("ended", function () {
+      video.addEventListener("ended", function () {
         this.currentTime = 0; // Reset the video to the beginning
         Play(); // Play the video again
-    });
+      });
 
-    function Play() {
+      function Play() {
         video.style.opacity = 1; // Fade in the video
         video.play(); // Start playing the video
-    }Play();
-</script>
+      }
+      Play();
+    </script>
 
+    <header class="header" data-header>
+      <div class="container">
+        <h1 class="h1 logo">
+          <a href="#">Arsdeep D<span>.</span></a>
+        </h1>
 
-  <header class="header" data-header>
-    <div class="container">
-
-      <h1 class="h1 logo">
-        <a href="#">Arsdeep D<span>.</span></a>
-      </h1>
-
-      <div class="navbar-actions">
-
-        <!-- <select name="language" id="lang">
+        <div class="navbar-actions">
+          <!-- <select name="language" id="lang">
           <option value="En">En</option>
           <option value="Hin">Hin</option>
         </select> -->
 
-        <!-- <button class="theme-btn" aria-label="Change Theme" title="Change Theme" data-theme-btn>
+          <!-- <button class="theme-btn" aria-label="Change Theme" title="Change Theme" data-theme-btn>
           <span class="icon"></span>
         </button> -->
+        </div>
 
+        <button
+          class="nav-toggle-btn"
+          aria-label="Toggle Menu"
+          title="Toggle Menu"
+          data-nav-toggle-btn
+        >
+          <span class="one"></span>
+          <span class="two"></span>
+          <span class="three"></span>
+        </button>
+
+        <nav class="navbar" data-navbar>
+          <ul class="navbar-list">
+            <li><a href="#home" class="navbar-link">Home</a></li>
+            <li><a href="#about" class="navbar-link">About</a></li>
+            <li><a href="#skills" class="navbar-link">Skills</a></li>
+            <li><a href="#portfolio" class="navbar-link">Projects</a></li>
+            <li><a href="#contact" class="navbar-link">Contact</a></li>
+          </ul>
+        </nav>
       </div>
+    </header>
 
-      <button class="nav-toggle-btn" aria-label="Toggle Menu" title="Toggle Menu" data-nav-toggle-btn>
-        <span class="one"></span>
-        <span class="two"></span>
-        <span class="three"></span>
-      </button>
-
-      <nav class="navbar" data-navbar>
-        <ul class="navbar-list">
-          <li><a href="#home" class="navbar-link">Home</a></li>
-          <li><a href="#about" class="navbar-link">About</a></li>
-          <li><a href="#skills" class="navbar-link">Skills</a></li>
-          <li><a href="#portfolio" class="navbar-link">Projects</a></li>
-          <li><a href="#contact" class="navbar-link">Contact</a></li>
-        </ul>
-      </nav>
-
-    </div>
-  </header>
-
-
-  <main>
-    <article class="container">
-
-      <!-- 
+    <main>
+      <article class="container">
+        <!-- 
         - #HERO
       -->
-      
-      <section class="hero" id="home">
 
-        <!-- <figure class="hero-banner">
+        <section class="hero" id="home">
+          <!-- <figure class="hero-banner">
           <picture>
             <img src="./assets/images/MainImg.png" class="w-100" style="transform: scale(0.8,0.8);">
           </picture>
         </figure> -->
 
-        <div class="hero-content">
-          <h2 class="h2 hero-title" id="DynamicMainContent" style="color: black;">Web & Software Application Development</h2>
-        </div>
-        <a href="#contact" class="btn btn-primary" style="position: relative; top: 9rem;">Get in touch</a>
+          <div class="hero-content">
+            <h2
+              class="h2 hero-title"
+              id="DynamicMainContent"
+              style="color: black"
+            >
+              Web & Software Application Development
+            </h2>
+          </div>
+          <a
+            href="#contact"
+            class="btn btn-primary"
+            style="position: relative; top: 9rem"
+            >Get in touch</a
+          >
 
-        <ul class="hero-social-list">
+          <ul class="hero-social-list">
+            <li>
+              <a href="#" class="hero-social-link">
+                <ion-icon name="logo-discord"></ion-icon>
 
-          <li>
-            <a href="#" class="hero-social-link">
-              <ion-icon name="logo-discord"></ion-icon>
+                <div class="tooltip">Discord</div>
+              </a>
+            </li>
 
-              <div class="tooltip">Discord</div>
-            </a>
-          </li>
+            <li>
+              <a href="#" class="hero-social-link">
+                <ion-icon name="logo-instagram"></ion-icon>
 
-          <li>
-            <a href="#" class="hero-social-link">
-              <ion-icon name="logo-instagram"></ion-icon>
+                <div class="tooltip">Instagram</div>
+              </a>
+            </li>
 
-              <div class="tooltip">Instagram</div>
-            </a>
-          </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/arsdeep-dewangan-94803b257/"
+                class="hero-social-link"
+              >
+                <ion-icon name="logo-linkedin"></ion-icon>
 
-          <li>
-            <a href="https://www.linkedin.com/in/arsdeep-dewangan-94803b257/" class="hero-social-link">
-              <ion-icon name="logo-linkedin"></ion-icon>
+                <div class="tooltip">Linkedin</div>
+              </a>
+            </li>
 
-              <div class="tooltip">Linkedin</div>
-            </a>
-          </li>
+            <li>
+              <a href="#" class="hero-social-link">
+                <ion-icon name="logo-twitter"></ion-icon>
 
-          <li>
-            <a href="#" class="hero-social-link">
-              <ion-icon name="logo-twitter"></ion-icon>
+                <div class="tooltip">Twitter</div>
+              </a>
+            </li>
 
-              <div class="tooltip">Twitter</div>
-            </a>
-          </li>
+            <li>
+              <a href="https://github.com/Arsdeep" class="hero-social-link">
+                <ion-icon name="logo-github"></ion-icon>
 
-          <li>
-            <a href="https://github.com/Arsdeep" class="hero-social-link">
-              <ion-icon name="logo-github"></ion-icon>
+                <div class="tooltip">GitHub</div>
+              </a>
+            </li>
+          </ul>
 
-              <div class="tooltip">GitHub</div>
-            </a>
-          </li>
+          <a href="#stats" class="scroll-down">Scroll</a>
+        </section>
 
-        </ul>
-
-        <a href="#stats" class="scroll-down">Scroll</a>
-
-      </section>
-
-
-
-
-
-      <!-- 
+        <!-- 
         - #STATS
       -->
 
-      <section class="stats" id="stats">
-        <ul class="stats-list">
+        <section class="stats" id="stats">
+          <ul class="stats-list">
+            <li>
+              <a href="#" class="stats-card">
+                <div class="card-icon">
+                  <img
+                    src="./assets/images/stats-card_icon-1.png"
+                    alt="Badge icon"
+                  />
+                </div>
 
-          <li>
-            <a href="#" class="stats-card">
+                <h2 class="h2 card-title">
+                  100+
+                  <strong>Solved questions in LeetCode & Hackerrank</strong>
+                </h2>
 
-              <div class="card-icon">
-                <img src="./assets/images/stats-card_icon-1.png" alt="Badge icon">
-              </div>
+                <ion-icon name="chevron-forward-outline"></ion-icon>
+              </a>
+            </li>
 
-              <h2 class="h2 card-title">
-                100+ <strong>Solved questions in LeetCode & Hackerrank</strong>
-              </h2>
+            <li>
+              <a href="#" class="stats-card">
+                <div class="card-icon">
+                  <img
+                    src="./assets/images/stats-card_icon-2.png"
+                    alt="Checkmark icon"
+                  />
+                </div>
 
-              <ion-icon name="chevron-forward-outline"></ion-icon>
+                <h2 class="h2 card-title">
+                  20+ <strong>Completed Projects</strong>
+                </h2>
 
-            </a>
-          </li>
+                <ion-icon name="chevron-forward-outline"></ion-icon>
+              </a>
+            </li>
 
-          <li>
-            <a href="#" class="stats-card">
+            <li>
+              <a href="#" class="stats-card">
+                <div class="card-icon">
+                  <img
+                    src="./assets/images/stats-card_icon-3.png"
+                    alt="Peoples rating icon"
+                  />
+                </div>
 
-              <div class="card-icon">
-                <img src="./assets/images/stats-card_icon-2.png" alt="Checkmark icon">
-              </div>
+                <h2 class="h2 card-title">
+                  10+ <strong>Open Source Contributions</strong>
+                </h2>
 
-              <h2 class="h2 card-title">
-                20+ <strong>Completed Projects</strong>
-              </h2>
+                <ion-icon name="chevron-forward-outline"></ion-icon>
+              </a>
+            </li>
+          </ul>
+        </section>
 
-              <ion-icon name="chevron-forward-outline"></ion-icon>
-
-            </a>
-          </li>
-
-          <li>
-            <a href="#" class="stats-card">
-
-              <div class="card-icon">
-                <img src="./assets/images/stats-card_icon-3.png" alt="Peoples rating icon">
-              </div>
-
-              <h2 class="h2 card-title">
-                10+ <strong>Open Source Contributions</strong>
-              </h2>
-
-              <ion-icon name="chevron-forward-outline"></ion-icon>
-
-            </a>
-          </li>
-
-        </ul>
-      </section>
-
-
-
-
-
-      <!-- 
+        <!-- 
         - #ABOUT
       -->
 
-      <section class="about" id="about">
+        <section class="about" id="about">
+          <figure class="about-banner">
+            <img
+              src="./assets/images/MyImage2.png"
+              class="w-100"
+              style="transform: scale(1.2, 1.2)"
+            />
+          </figure>
 
-        <figure class="about-banner">
-          <img src="./assets/images/MyImage2.png" class="w-100" style="transform: scale(1.2,1.2);">
-        </figure>
+          <div class="about-content section-content">
+            <p class="section-subtitle">About me</p>
 
-        <div class="about-content section-content">
+            <h2 class="h3 section-title">
+              Need a Software Product? I can Help You!
+            </h2>
 
-          <p class="section-subtitle">About me</p>
+            <p class="section-text">
+              Hi! I’m Arsdeep Dewangan, a developer who has passion for building
+              web and software applications with intuitive functionalities. I
+              enjoy the process of turning ideas into reality using creative
+              solutions. I’m always curious about learning new skills, tools,
+              and concepts. In addition to softwares, I can also create python
+              scripts to automate various tasks to make your life easier.
+            </p>
 
-          <h2 class="h3 section-title">Need a Software Product? I can Help You!</h2>
+            <div class="btn-group">
+              <button class="btn btn-secondary">
+                <a href="#contact" style="text-decoration: none; color: black"
+                  >Hire me</a
+                >
+              </button>
 
-          <p class="section-text">
-            Hi! I’m Arsdeep Dewangan, a developer who has passion for building web and software applications
-            with intuitive functionalities. I enjoy the process of turning ideas into reality using creative solutions.
-            I’m always curious about learning new skills, tools, and concepts. In addition to softwares, I can also
-            create python scripts to automate various tasks to make your life easier.
-          </p>
-
-          <div class="btn-group">
-            <button class="btn btn-secondary"><a href="#contact" style="text-decoration: none; color: black;">Hire me</a></button>
-
-            <button class="btn btn-primary">Download cv</button>
+              <button class="btn btn-primary">Download cv</button>
+            </div>
           </div>
+        </section>
 
-        </div>
-
-      </section>
-
-
-      <br><br>
-      <!-- 
+        <br /><br />
+        <!-- 
         - #SKILLS
       -->
 
-      <section class="skills" id="skills">
+        <section class="skills" id="skills">
+          <div class="skills-content section-content">
+            <p class="section-subtitle">My skills</p>
 
-        <div class="skills-content section-content">
+            <h2 class="h3 section-title">My Programming Skills -</h2>
 
-          <p class="section-subtitle">My skills</p>
+            <p class="section-text">
+              I develop simple, intuitive and responsive websites which
+              fullfills both clients and users needs. I develop python scripts
+              aswell to automate tasks like webscraping.
+            </p>
 
-          <h2 class="h3 section-title">My Programming Skills -</h2>
+            <div class="skills-toggle" data-toggle-box>
+              <button class="toggle-btn active" data-toggle-btn>Skills</button>
 
-          <p class="section-text">
-            I develop simple, intuitive and responsive websites which fullfills both clients and users needs. I develop
-            python scripts aswell to automate tasks like webscraping.
-          </p>
-
-          <div class="skills-toggle" data-toggle-box>
-            <button class="toggle-btn active" data-toggle-btn>Skills</button>
-
-            <button class="toggle-btn" data-toggle-btn>Tools</button>
+              <button class="toggle-btn" data-toggle-btn>Tools</button>
+            </div>
           </div>
 
-        </div>
+          <div class="skills-box" data-skills-box>
+            <ul class="skills-list">
+              <li>
+                <div class="skill-card">
+                  <div class="tooltip">HTML5</div>
 
-        <div class="skills-box" data-skills-box>
-
-          <ul class="skills-list">
-
-            <li>
-              <div class="skill-card">
-                <div class="tooltip">HTML5</div>
-
-                <div class="card-icon">
-                  <img src="./assets/images/html5.png" alt="HTML5 logo">
+                  <div class="card-icon">
+                    <img src="./assets/images/html5.png" alt="HTML5 logo" />
+                  </div>
                 </div>
-              </div>
-            </li>
+              </li>
 
-            <li>
-              <div class="skill-card">
-                <div class="tooltip">CSS3</div>
+              <li>
+                <div class="skill-card">
+                  <div class="tooltip">CSS3</div>
 
-                <div class="card-icon">
-                  <img src="./assets/images/css3.png" alt="CSS3 logo">
+                  <div class="card-icon">
+                    <img src="./assets/images/css3.png" alt="CSS3 logo" />
+                  </div>
                 </div>
-              </div>
-            </li>
+              </li>
 
-            <li>
-              <div class="skill-card">
-                <div class="tooltip">JavaScript</div>
+              <li>
+                <div class="skill-card">
+                  <div class="tooltip">JavaScript</div>
 
-                <div class="card-icon">
-                  <img src="./assets/images/javascript.png" alt="JavaScript logo">
+                  <div class="card-icon">
+                    <img
+                      src="./assets/images/javascript.png"
+                      alt="JavaScript logo"
+                    />
+                  </div>
                 </div>
-              </div>
-            </li>
+              </li>
 
-            <li>
-              <div class="skill-card">
-                <div class="tooltip">C</div>
+              <li>
+                <div class="skill-card">
+                  <div class="tooltip">C</div>
 
-                <div class="card-icon">
-                  <img src="./assets/images/c.png" alt="C logo">
+                  <div class="card-icon">
+                    <img src="./assets/images/c.png" alt="C logo" />
+                  </div>
                 </div>
-              </div>
-            </li>
+              </li>
 
-            <li>
-              <div class="skill-card">
-                <div class="tooltip">C++</div>
+              <li>
+                <div class="skill-card">
+                  <div class="tooltip">C++</div>
 
-                <div class="card-icon">
-                  <img src="./assets/images/cpp.png" alt="C++ logo">
+                  <div class="card-icon">
+                    <img src="./assets/images/cpp.png" alt="C++ logo" />
+                  </div>
                 </div>
-              </div>
-            </li>
+              </li>
 
-            <li>
-              <div class="skill-card">
-                <div class="tooltip">C#</div>
+              <li>
+                <div class="skill-card">
+                  <div class="tooltip">C#</div>
 
-                <div class="card-icon">
-                  <img src="./assets/images/c-sharp.png" alt="C# logo">
+                  <div class="card-icon">
+                    <img src="./assets/images/c-sharp.png" alt="C# logo" />
+                  </div>
                 </div>
-              </div>
-            </li>
+              </li>
 
-            <li>
-              <div class="skill-card">
-                <div class="tooltip">Python</div>
+              <li>
+                <div class="skill-card">
+                  <div class="tooltip">Python</div>
 
-                <div class="card-icon">
-                  <img src="./assets/images/Python.png" alt="Python logo">
+                  <div class="card-icon">
+                    <img src="./assets/images/Python.png" alt="Python logo" />
+                  </div>
                 </div>
-              </div>
-            </li>
+              </li>
 
-            <li>
-              <div class="skill-card">
-                <div class="tooltip">R</div>
+              <li>
+                <div class="skill-card">
+                  <div class="tooltip">R</div>
 
-                <div class="card-icon">
-                  <img src="./assets/images/R.png" alt="R logo">
+                  <div class="card-icon">
+                    <img src="./assets/images/R.png" alt="R logo" />
+                  </div>
                 </div>
-              </div>
-            </li>
+              </li>
 
-            <li>
-              <div class="skill-card">
-                <div class="tooltip">SQL</div>
+              <li>
+                <div class="skill-card">
+                  <div class="tooltip">SQL</div>
 
-                <div class="card-icon">
-                  <img src="./assets/images/SQL.png" alt="SQL logo">
+                  <div class="card-icon">
+                    <img src="./assets/images/SQL.png" alt="SQL logo" />
+                  </div>
                 </div>
-              </div>
-            </li>
+              </li>
 
-            <li>
-              <div class="skill-card">
-                <div class="tooltip">Firebase</div>
+              <li>
+                <div class="skill-card">
+                  <div class="tooltip">Firebase</div>
 
-                <div class="card-icon">
-                  <img src="./assets/images/firebase.png" alt="Firebase logo">
+                  <div class="card-icon">
+                    <img
+                      src="./assets/images/firebase.png"
+                      alt="Firebase logo"
+                    />
+                  </div>
                 </div>
-              </div>
-            </li>
+              </li>
 
-            <li>
-              <div class="skill-card">
-                <div class="tooltip">Arduino</div>
+              <li>
+                <div class="skill-card">
+                  <div class="tooltip">Arduino</div>
 
-                <div class="card-icon">
-                  <img src="./assets/images/Arduino.png" alt="Arduino logo">
+                  <div class="card-icon">
+                    <img src="./assets/images/Arduino.png" alt="Arduino logo" />
+                  </div>
                 </div>
-              </div>
-            </li>
+              </li>
 
-            <li>
-              <div class="skill-card">
-                <div class="tooltip">Raspberry Pi</div>
+              <li>
+                <div class="skill-card">
+                  <div class="tooltip">Raspberry Pi</div>
 
-                <div class="card-icon">
-                  <img src="./assets/images/Raspberry.png" alt="Raspberry Pi logo">
+                  <div class="card-icon">
+                    <img
+                      src="./assets/images/Raspberry.png"
+                      alt="Raspberry Pi logo"
+                    />
+                  </div>
                 </div>
-              </div>
-            </li>
+              </li>
+            </ul>
 
+            <ul class="tools-list">
+              <li>
+                <div class="skill-card">
+                  <div class="tooltip">Visual Studio Code</div>
 
-          </ul>
-
-          <ul class="tools-list">
-
-            <li>
-              <div class="skill-card">
-                <div class="tooltip">Visual Studio Code</div>
-
-                <div class="card-icon">
-                  <img src="./assets/images/Visual_Studio_Code.png" alt="VS Code logo">
+                  <div class="card-icon">
+                    <img
+                      src="./assets/images/Visual_Studio_Code.png"
+                      alt="VS Code logo"
+                    />
+                  </div>
                 </div>
-              </div>
-            </li>
+              </li>
 
-            <li>
-              <div class="skill-card">
-                <div class="tooltip">Visual Studio</div>
+              <li>
+                <div class="skill-card">
+                  <div class="tooltip">Visual Studio</div>
 
-                <div class="card-icon">
-                  <img src="./assets/images/Visual_Studio.png" alt="Gulp logo">
+                  <div class="card-icon">
+                    <img
+                      src="./assets/images/Visual_Studio.png"
+                      alt="Gulp logo"
+                    />
+                  </div>
                 </div>
-              </div>
-            </li>
+              </li>
 
-            <li>
-              <div class="skill-card">
-                <div class="tooltip">Clion</div>
+              <li>
+                <div class="skill-card">
+                  <div class="tooltip">Clion</div>
 
-                <div class="card-icon">
-                  <img src="./assets/images/Clion.png" alt="Clion logo">
+                  <div class="card-icon">
+                    <img src="./assets/images/Clion.png" alt="Clion logo" />
+                  </div>
                 </div>
-              </div>
-            </li>
+              </li>
 
-            <li>
-              <div class="skill-card">
-                <div class="tooltip">PyCharm</div>
+              <li>
+                <div class="skill-card">
+                  <div class="tooltip">PyCharm</div>
 
-                <div class="card-icon">
-                  <img src="./assets/images/PyCharm.png" alt="PyCharm logo">
+                  <div class="card-icon">
+                    <img src="./assets/images/PyCharm.png" alt="PyCharm logo" />
+                  </div>
                 </div>
-              </div>
-            </li>
+              </li>
 
-            <li>
-              <div class="skill-card">
-                <div class="tooltip">Anaconda</div>
+              <li>
+                <div class="skill-card">
+                  <div class="tooltip">Anaconda</div>
 
-                <div class="card-icon">
-                  <img src="./assets/images/conda.png" alt="Anaconda logo">
+                  <div class="card-icon">
+                    <img src="./assets/images/conda.png" alt="Anaconda logo" />
+                  </div>
                 </div>
-              </div>
-            </li>
+              </li>
 
-            <li>
-              <div class="skill-card">
-                <div class="tooltip">Git</div>
+              <li>
+                <div class="skill-card">
+                  <div class="tooltip">Git</div>
 
-                <div class="card-icon">
-                  <img src="./assets/images/git.png" alt="Git logo">
+                  <div class="card-icon">
+                    <img src="./assets/images/git.png" alt="Git logo" />
+                  </div>
                 </div>
-              </div>
-            </li>
+              </li>
 
+              <li>
+                <div class="skill-card">
+                  <div class="tooltip">Pip</div>
 
-            <li>
-              <div class="skill-card">
-                <div class="tooltip">Pip</div>
-
-                <div class="card-icon">
-                  <img src="./assets/images/pip.png" alt="Pip logo">
+                  <div class="card-icon">
+                    <img src="./assets/images/pip.png" alt="Pip logo" />
+                  </div>
                 </div>
-              </div>
-            </li>
+              </li>
 
-            <li>
-              <div class="skill-card">
-                <div class="tooltip">Npm</div>
+              <li>
+                <div class="skill-card">
+                  <div class="tooltip">Npm</div>
 
-                <div class="card-icon">
-                  <img src="./assets/images/npm.png" alt="Npm logo">
+                  <div class="card-icon">
+                    <img src="./assets/images/npm.png" alt="Npm logo" />
+                  </div>
                 </div>
-              </div>
-            </li>
+              </li>
 
-            <li>
-              <div class="skill-card">
-                <div class="tooltip">Command Line</div>
+              <li>
+                <div class="skill-card">
+                  <div class="tooltip">Command Line</div>
 
-                <div class="card-icon">
-                  <img src="./assets/images/command.png" alt="Command Line logo">
+                  <div class="card-icon">
+                    <img
+                      src="./assets/images/command.png"
+                      alt="Command Line logo"
+                    />
+                  </div>
                 </div>
-              </div>
-            </li>
+              </li>
 
+              <li>
+                <div class="skill-card">
+                  <div class="tooltip">Figma</div>
 
-            <li>
-              <div class="skill-card">
-                <div class="tooltip">Figma</div>
-
-                <div class="card-icon">
-                  <img src="./assets/images/figma.png" alt="Figma logo">
+                  <div class="card-icon">
+                    <img src="./assets/images/figma.png" alt="Figma logo" />
+                  </div>
                 </div>
-              </div>
-            </li>
+              </li>
 
-            <li>
-              <div class="skill-card">
-                <div class="tooltip">ClickUp</div>
+              <li>
+                <div class="skill-card">
+                  <div class="tooltip">ClickUp</div>
 
-                <div class="card-icon">
-                  <img src="./assets/images/clickup.png" alt="ClickUp logo">
+                  <div class="card-icon">
+                    <img src="./assets/images/clickup.png" alt="ClickUp logo" />
+                  </div>
                 </div>
-              </div>
-            </li>
+              </li>
 
-            <li>
-              <div class="skill-card">
-                <div class="tooltip">Slack</div>
+              <li>
+                <div class="skill-card">
+                  <div class="tooltip">Slack</div>
 
-                <div class="card-icon">
-                  <img src="./assets/images/slack.png" alt="Slack logo">
+                  <div class="card-icon">
+                    <img src="./assets/images/slack.png" alt="Slack logo" />
+                  </div>
                 </div>
-              </div>
-            </li>
+              </li>
 
-            <li>
-              <div class="skill-card">
-                <div class="tooltip">Photoshop</div>
+              <li>
+                <div class="skill-card">
+                  <div class="tooltip">Photoshop</div>
 
-                <div class="card-icon">
-                  <img src="./assets/images/photoshop.png" alt="Photoshop logo">
+                  <div class="card-icon">
+                    <img
+                      src="./assets/images/photoshop.png"
+                      alt="Photoshop logo"
+                    />
+                  </div>
                 </div>
-              </div>
-            </li>
+              </li>
+            </ul>
+          </div>
+        </section>
 
+        <br /><br />
 
-          </ul>
-
-        </div>
-
-      </section>
-
-
-
-      <br><br>
-
-      <!-- 
+        <!-- 
         - #PROJECTS
       -->
 
-      <section class="project" id="portfolio">
+        <section class="project" id="portfolio">
+          <ul class="project-list">
+            <li>
+              <div class="project-content section-content">
+                <p class="section-subtitle">My Works</p>
 
-        <ul class="project-list">
+                <h2 class="h3 section-title">My Projects and Scripts!</h2>
 
-          <li>
-            <div class="project-content section-content">
-
-              <p class="section-subtitle">My Works</p>
-
-              <h2 class="h3 section-title">My Projects and Scripts!</h2>
-
-              <p class="section-text">
-                I develop the best quality website that serves for the long-term. Well-documented, clean, easy and
-                elegant interface. I also make reusable and configurable Python scripts to automate tasks and make your
-                life easy and efficient.
-              </p>
-
-            </div>
-          </li>
-
-          <li>
-            <a href="#" class="project-card">
-
-              <figure class="card-banner">
-                <img src="./assets/images/BotWolf.png" class="w-100" alt="Picture of a Wolf Art">
-              </figure>
-
-              <div class="card-content">
-                <h3 class="h4 card-title">WolfBot</h3>
-
-                <p class="card-content-p">A Discord Bot with GPT-3 Features Enabled</p>
+                <p class="section-text">
+                  I develop the best quality website that serves for the
+                  long-term. Well-documented, clean, easy and elegant interface.
+                  I also make reusable and configurable Python scripts to
+                  automate tasks and make your life easy and efficient.
+                </p>
               </div>
-
-            </a>
-          </li>
-
-          <li>
-            <a href="#" class="project-card">
-
-              <figure class="card-banner">
-                <img src="./assets/images/Bus.jpg" class="w-100" alt="On a Blue background, a Wacom and a mouse.">
-              </figure>
-
-              <div class="card-content">
-                <h3 class="h4 card-title">Bus Management System</h3>
-
-                <p class="card-content-p">A basic Bus Record Management System</p>
-              </div>
-
-            </a>
-          </li>
-
-          <li>
-            <a href="https:\\arsdeep.github.io" class="project-card">
-
-              <figure class="card-banner">
-                <img src="./assets/images/Wolfey.png" class="w-100"
-                  alt="A Cassette tape on a mellow apricot background.">
-              </figure>
-
-              <div class="card-content">
-                <h3 class="h4 card-title">Wolfey.io</h3>
-
-                <p class="card-content-p">Website for Game Devs to learn, collaborate and share</p>
-              </div>
-
-            </a>
-          </li>
-
-          <li>
-            <a href="#" class="project-card">
-
-              <figure class="card-banner">
-                <img src="./assets/images/Anonity.png" class="w-100"
-                  alt="Blue digital watch on a dark liver background.">
-              </figure>
-
-              <div class="card-content">
-                <h3 class="h4 card-title">Anonity</h3>
-
-                <p class="card-content-p">An Anonymous Chat application</p>
-              </div>
-
-            </a>
-          </li>
-
-        </ul>
-
-      </section>
-
-
-
-
-
-      <!-- 
-        - #CONTACT
-      -->
-
-      <section class="contact" id="contact">
-
-        <div class="contact-content section-content">
-
-          <p class="section-subtitle">Contact</p>
-
-          <h2 class="h3 section-title">Have You Any Project? Please Drop a Message</h2>
-
-          <p class="section-text">
-            Get in touch and let me know how i can help. Fill out the form and i’ll be in touch as soon as possible.
-          </p>
-
-          <ul class="contact-list">
-
-            <li class="contact-list-item">
-
-              <div class="contact-item-icon">
-                <ion-icon name="location-outline"></ion-icon>
-              </div>
-
-              <div class="wrapper">
-                <h3 class="h4 contact-item-title">Address:</h3>
-
-                <address class="contact-info">
-                  Kota, Rajasthan, India
-                </address>
-              </div>
-
-            </li>
-
-            <li class="contact-list-item">
-
-              <div class="contact-item-icon">
-                <ion-icon name="call-outline"></ion-icon>
-              </div>
-
-              <div class="wrapper">
-                <h3 class="h4 contact-item-title">Phone:</h3>
-
-                <a href="tel:01234567789" class="contact-info">(+91) 9351929904</a>
-              </div>
-
-            </li>
-
-            <li class="contact-list-item">
-
-              <div class="contact-item-icon">
-                <ion-icon name="mail-outline"></ion-icon>
-              </div>
-
-              <div class="wrapper">
-                <h3 class="h4 contact-item-title">Email:</h3>
-
-                <a href="mailto:arsgulu@gmail.com" class="contact-info">arsgulu@gmail.com</a>
-
-                <a href="mailto:arshdeepdewangan123@gmail.com" class="contact-info">arshdeepdewangan123@gmail.com</a>
-              </div>
-
             </li>
 
             <li>
-              <ul class="contac-social-list">
+              <a href="#" class="project-card">
+                <figure class="card-banner">
+                  <img
+                    src="./assets/images/BotWolf.png"
+                    class="w-100"
+                    alt="Picture of a Wolf Art"
+                  />
+                </figure>
 
-                <li>
-                  <a href="#" class="contact-social-link">
-                    <div class="tooltip">Instagram</div>
+                <div class="card-content">
+                  <h3 class="h4 card-title">WolfBot</h3>
 
-                    <ion-icon name="logo-instagram"></ion-icon>
-                  </a>
-                </li>
-
-                <li>
-                  <a href="#" class="contact-social-link">
-                    <div class="tooltip">Twitter</div>
-
-                    <ion-icon name="logo-twitter"></ion-icon>
-                  </a>
-                </li>
-
-                <li>
-                  <a href="https://www.linkedin.com/in/arsdeep-dewangan-94803b257/" class="contact-social-link">
-                    <div class="tooltip">Linkedin</div>
-
-                    <ion-icon name="logo-linkedin"></ion-icon>
-                  </a>
-                </li>
-
-                <li>
-                  <a href="https://github.com/Arsdeep" class="contact-social-link">
-                    <div class="tooltip">GitHub</div>
-
-                    <ion-icon name="logo-github"></ion-icon>
-                  </a>
-                </li>
-
-              </ul>
+                  <p class="card-content-p">
+                    A Discord Bot with GPT-3 Features Enabled
+                  </p>
+                </div>
+              </a>
             </li>
 
+            <li>
+              <a href="#" class="project-card">
+                <figure class="card-banner">
+                  <img
+                    src="./assets/images/Bus.jpg"
+                    class="w-100"
+                    alt="On a Blue background, a Wacom and a mouse."
+                  />
+                </figure>
+
+                <div class="card-content">
+                  <h3 class="h4 card-title">Bus Management System</h3>
+
+                  <p class="card-content-p">
+                    A basic Bus Record Management System
+                  </p>
+                </div>
+              </a>
+            </li>
+
+            <li>
+              <a href="https:\\arsdeep.github.io" class="project-card">
+                <figure class="card-banner">
+                  <img
+                    src="./assets/images/Wolfey.png"
+                    class="w-100"
+                    alt="A Cassette tape on a mellow apricot background."
+                  />
+                </figure>
+
+                <div class="card-content">
+                  <h3 class="h4 card-title">Wolfey.io</h3>
+
+                  <p class="card-content-p">
+                    Website for Game Devs to learn, collaborate and share
+                  </p>
+                </div>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="project-card">
+                <figure class="card-banner">
+                  <img
+                    src="./assets/images/Anonity.png"
+                    class="w-100"
+                    alt="Blue digital watch on a dark liver background."
+                  />
+                </figure>
+
+                <div class="card-content">
+                  <h3 class="h4 card-title">Anonity</h3>
+
+                  <p class="card-content-p">An Anonymous Chat application</p>
+                </div>
+              </a>
+            </li>
           </ul>
+        </section>
 
-        </div>
+        <!-- 
+        - #CONTACT
+      -->
 
-        <form action="" class="contact-form">
+        <section class="contact" id="contact">
+          <div class="contact-content section-content">
+            <p class="section-subtitle">Contact</p>
 
-          <div class="form-wrapper">
+            <h2 class="h3 section-title">
+              Have You Any Project? Please Drop a Message
+            </h2>
 
-            <label for="name" class="form-label">Name</label>
+            <p class="section-text">
+              Get in touch and let me know how i can help. Fill out the form and
+              i’ll be in touch as soon as possible.
+            </p>
 
-            <div class="input-wrapper">
+            <ul class="contact-list">
+              <li class="contact-list-item">
+                <div class="contact-item-icon">
+                  <ion-icon name="location-outline"></ion-icon>
+                </div>
 
-              <input type="text" name="name" id="name" required placeholder="Your Name" class="input-field">
+                <div class="wrapper">
+                  <h3 class="h4 contact-item-title">Address:</h3>
 
-              <ion-icon name="person-circle"></ion-icon>
+                  <address class="contact-info">Kota, Rajasthan, India</address>
+                </div>
+              </li>
 
-            </div>
+              <li class="contact-list-item">
+                <div class="contact-item-icon">
+                  <ion-icon name="call-outline"></ion-icon>
+                </div>
 
+                <div class="wrapper">
+                  <h3 class="h4 contact-item-title">Phone:</h3>
+
+                  <a href="tel:01234567789" class="contact-info"
+                    >(+91) 9351929904</a
+                  >
+                </div>
+              </li>
+
+              <li class="contact-list-item">
+                <div class="contact-item-icon">
+                  <ion-icon name="mail-outline"></ion-icon>
+                </div>
+
+                <div class="wrapper">
+                  <h3 class="h4 contact-item-title">Email:</h3>
+
+                  <a href="mailto:arsgulu@gmail.com" class="contact-info"
+                    >arsgulu@gmail.com</a
+                  >
+
+                  <a
+                    href="mailto:arshdeepdewangan123@gmail.com"
+                    class="contact-info"
+                    >arshdeepdewangan123@gmail.com</a
+                  >
+                </div>
+              </li>
+
+              <li>
+                <ul class="contac-social-list">
+                  <li>
+                    <a href="#" class="contact-social-link">
+                      <div class="tooltip">Instagram</div>
+
+                      <ion-icon name="logo-instagram"></ion-icon>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="#" class="contact-social-link">
+                      <div class="tooltip">Twitter</div>
+
+                      <ion-icon name="logo-twitter"></ion-icon>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a
+                      href="https://www.linkedin.com/in/arsdeep-dewangan-94803b257/"
+                      class="contact-social-link"
+                    >
+                      <div class="tooltip">Linkedin</div>
+
+                      <ion-icon name="logo-linkedin"></ion-icon>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a
+                      href="https://github.com/Arsdeep"
+                      class="contact-social-link"
+                    >
+                      <div class="tooltip">GitHub</div>
+
+                      <ion-icon name="logo-github"></ion-icon>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
           </div>
 
-          <div class="form-wrapper">
+          <form action="" class="contact-form">
+            <div class="form-wrapper">
+              <label for="name" class="form-label">Name</label>
 
-            <label for="email" class="form-label">Email</label>
+              <div class="input-wrapper">
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  required
+                  placeholder="Your Name"
+                  class="input-field"
+                />
 
-            <div class="input-wrapper">
-
-              <input type="email" name="email" id="email" required placeholder="someone@mail.com" class="input-field">
-
-              <ion-icon name="mail"></ion-icon>
-
+                <ion-icon name="person-circle"></ion-icon>
+              </div>
             </div>
 
-          </div>
+            <div class="form-wrapper">
+              <label for="email" class="form-label">Email</label>
 
-          <div class="form-wrapper">
+              <div class="input-wrapper">
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  required
+                  placeholder="someone@mail.com"
+                  class="input-field"
+                />
 
-            <label for="phone" class="form-label">Phone</label>
-
-            <div class="input-wrapper">
-
-              <input type="tel" name="phone" id="phone" required placeholder="+XX XXXXXXXXXX" class="input-field">
-
-              <ion-icon name="call"></ion-icon>
-
+                <ion-icon name="mail"></ion-icon>
+              </div>
             </div>
 
-          </div>
+            <div class="form-wrapper">
+              <label for="phone" class="form-label">Phone</label>
 
-          <div class="form-wrapper">
+              <div class="input-wrapper">
+                <input
+                  type="tel"
+                  name="phone"
+                  id="phone"
+                  required
+                  placeholder="+XX XXXXXXXXXX"
+                  class="input-field"
+                />
 
-            <label for="message" class="form-label">Message</label>
-
-            <div class="input-wrapper">
-
-              <textarea name="message" id="message" required placeholder="Write message..."
-                class="input-field"></textarea>
-
-              <ion-icon name="chatbubbles"></ion-icon>
-
+                <ion-icon name="call"></ion-icon>
+              </div>
             </div>
 
-          </div>
+            <div class="form-wrapper">
+              <label for="message" class="form-label">Message</label>
 
-          <button type="submit" class="btn btn-primary" onclick="SendMsg()">Send</button>
+              <div class="input-wrapper">
+                <textarea
+                  name="message"
+                  id="message"
+                  required
+                  placeholder="Write message..."
+                  class="input-field"
+                ></textarea>
 
-        </form>
+                <ion-icon name="chatbubbles"></ion-icon>
+              </div>
+            </div>
 
-      </section>
+            <button type="submit" class="btn btn-primary" onclick="SendMsg()">
+              Send
+            </button>
+          </form>
+        </section>
+      </article>
+    </main>
 
-    </article>
-  </main>
-
-
-
-
-
-  <!-- 
+    <!-- 
     - #FOOTER
   -->
 
-  <footer class="footer">
-    <div class="container">
+    <footer class="footer">
+      <div class="container">
+        <p class="h1 logo">
+          <a href="#"> Arsdeep <span>Dewangan</span> </a>
+        </p>
 
-      <p class="h1 logo">
-        <a href="#">
-          Arsdeep <span>Dewangan</span>
-        </a>
-      </p>
+        <p class="copyright">
+          &copy; 2023 <a href="#">Wolfey</a>. All rights reserved
+        </p>
+      </div>
+    </footer>
 
-      <p class="copyright">
-        &copy; 2023 <a href="#">Wolfey</a>. All rights reserved
-      </p>
-
-    </div>
-  </footer>
-
-  <!-- 
+    <!-- 
     - #GO TO TOP
   -->
 
-  <a href="#top" class="go-top" data-go-top title="Go to Top">
-    <ion-icon name="arrow-up"></ion-icon>
-  </a>
+    <a href="#top" class="go-top" data-go-top title="Go to Top">
+      <ion-icon name="arrow-up"></ion-icon>
+    </a>
 
-  <!-- 
+    <!-- 
     - custom js link
   -->
-  <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/script.js"></script>
 
-  <!-- 
+    <!-- 
     - ionicon link
   -->
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-</body>
-
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
 </html>
